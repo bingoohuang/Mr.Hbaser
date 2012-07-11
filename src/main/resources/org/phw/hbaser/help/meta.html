@@ -1,0 +1,20 @@
+<html>
+<body>
+<h4>定义表rowkey值类型(rowkeytype)、<br/> 列名类型(qualifiertype)、
+<br/>列值类型(valuetype)、<br/>列族中所有列值类型(famvaluetype)、<br/>
+或者 表中JPG图像字段(image)</h4>
+<ul>
+    <li>值类型支持short/int/long/float/double/boolean/string/base64</li>
+    <li>在查询时，short/int/long可以写成autonumber，float/double可以写成autofloat</li>
+    <li>没有定义值类型，默认为string</li>
+    <li>valuetype定义行中的family和qualifier可以使用*或者?进行通配符定义(fnmatch)</li>
+    <li>例如:</li>
+    <li><font color="red">rowkeytype</font>=long</li>
+    <li><font color="red">valuetype.</font>fam.age=int</li>
+    <li><font color="red">valuetype.</font>base.*_quantity=int</li>
+    <li><font color="red">qualifiertype.</font>fam=int</li>
+    <li><font color="red">famvaluetype.</font>fam=int</li>
+    <li><font color="red">image.</font>ImgInfo.ImgUrl=true</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+0.2.14
+1) 升级hbase从0.90.4到0.92.1
+2) 升级相关的jar包：新增common-configuration包、引入hbase, hadoop以及zookeeper包。
+
+0.2.13
+1) 修复大尺寸数据(例如图片)缓存的处理，改成直接缓存byte[](老的方式是转换为base64)
+2) 增加“表操作”－－“表列表刷新（refresh）”
+3) 增加值类型long-string形式（最后一个可以不定长）的定义（long是定长，但是string不定长）
+4）META定义行支持多key多value的形式，多key或多value以^分割
+
+0.2.12
+1) 修复多表操作时，选中多个无效BUG 2011年10月25日
+2) 修复多表导入时，META丢失时的BUG 2011年10月25日
+
+0.2.11
+1) 增加单独建表操作界面，建表时定义列族的TTL等属性 2011年10月13日
+2) 增加列类型:ipv4和hex，并且支持增加长度定义方式，例如：
+    valuetype.fam.col=hex(5)-long-base64(3)，表示5个字节的HEX编码，LONG，3个字节的BASE64编码。
+
+0.2.10
+1) 增加行锁定解锁功能(lockRow, unlockRow) 2011年10月10日
+2) 增加insert（行存在时，报告错误）和update(行不存在时，报告错误)功能 2011年10月10日
+
+0.2.9
+1) 增加Set输入框中JSON格式化（Pretty JSON)
+2) 增加Meta中valuetype中的fnmatch匹配功能
+
+0.2.8
+1） 显示查询结果时，列值按照最近修改时间倒序排列。（最近修改的列值靠前）
+
+0.2.7
+1） 2011年10月9日  增加值数字类型的组合支持，例如 valuetype.fam.qual=long-int-short

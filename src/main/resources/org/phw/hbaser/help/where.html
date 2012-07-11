@@ -1,0 +1,18 @@
+<html>
+<body>
+<h4>其他查询条件</h4>
+<ul>
+    <li>支持形式为： 列族.列名 操作符  操作值 [and 列族:列名 操作符  操作值]*</li>
+    <li>目前只支持and连接多个查询条件</li>
+    <li>操作符支持>=, >, ==, =, &lt;, &lt;=, !=, &lt;&gt;, =~, =^, in, between</li>
+    <li>操作符<font color="red">=~</font>表示正则表达式匹配，后面的操作值为正则表达式</li>
+    <li>操作符<font color="red">=^</font>表示以操作值开头</li>
+    <li>操作符<font color="red">in</font>表示在操作值中，操作值以英文逗号分隔(可以多个)</li>
+    <li>操作符<font color="red">between</font>表示范围，操作值以一个英文逗号分隔</li>
+    <li>当列名为<font color="red">qualifier</font>时，表示针对列名进行条件处理</li>
+    <li>例如: fam.age > 30 and fam.man = true</li>
+    <li>例如: fam.age between 24,30</li>
+    <li>例如: fam.age in 24,27,30</li>
+</ul>
+</body>
+</html>
